@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 const TabSection = () => {
-  // Stav pro aktivní záložku / State for the active tab
+
   const [activeTab, setActiveTab] = useState('About');
 
-  // Funkce pro přepínání záložek / Function to switch tabs
+
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
   };
@@ -16,25 +16,25 @@ const TabSection = () => {
           className={activeTab === 'About' ? 'active' : ''} 
           onClick={() => handleTabClick('About')}
         >
-          O projektu {/* About the project */}
+          O projektu 
         </li>
         <li 
           className={activeTab === 'HowItWorks' ? 'active' : ''} 
           onClick={() => handleTabClick('HowItWorks')}
         >
-          Jak to funguje {/* How it works */}
+          Jak to funguje 
         </li>
         <li 
           className={activeTab === 'Tips' ? 'active' : ''} 
           onClick={() => handleTabClick('Tips')}
         >
-          Tipy a triky {/* Tips and Tricks */}
+          Tipy a triky 
         </li>
         <li 
           className={activeTab === 'Contact' ? 'active' : ''} 
           onClick={() => handleTabClick('Contact')}
         >
-          Kontakt {/* Contact */}
+          Kontakt 
         </li>
       </ul>
 
