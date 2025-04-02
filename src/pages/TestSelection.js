@@ -1,27 +1,30 @@
-import { Link } from "react-router-dom"
+import React from 'react';
+import TestCard from '../components/TestCard';
 
 const TestSelection = () => {
-  const subjects = ["OSP", "ZSV - zatím bez testu", "Matematika - zatím bez testu", "Angličtina - zatím bez testu", "Přírodní vědy - zatím bez testu"]
-// podivat se na učebnici react str. 29
+  const subjects = [
+    { title: 'OSP', path: '/osp' },
+    { title: 'ZSV', path: '/zsv/test' },
+    { title: 'Angličtina', path: '/english/test' },
+    { title: 'Matematika', path: '/math/test' },
+    { title: 'Přírodní vědy', path: '/science/test' },
+  ];
 
   return (
     <div className="container">
-      <h2>Cvičné testy na scio!!!</h2>
+      <h2>Vyber si předmět</h2>
       <div className="test-grid">
         {subjects.map((subject, index) => (
-          <div key={index} className="test-card">
-            <h3>{subject}</h3>
-            <p>Popis testu {index + 1}</p>
-            <Link to={`/test/${index + 1}`} className="test-link">Spustit test</Link>
-          </div>
+          <TestCard
+            key={index}
+            title={subject.title}
+            description={`Procvičování testů z předmětu ${subject.title}.`}
+            linkPath={subject.path}
+          />
         ))}
       </div>
     </div>
   );
 };
 
-export default TestSelection
-
-// změnit text mužu i <button type="button" onClick=(buttonHandler)>změnit </button>
-
-//nezapomenout obalit do <div>
+export default TestSelection;

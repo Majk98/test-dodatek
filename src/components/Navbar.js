@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <Link to="/home">Home</Link>
-      <Link to="/testy">Testové obory</Link>
-      <Link to="/qr">Generátor QR</Link>
+      <Link to="/">Domů</Link>
+      <Link to="/tests">Testy</Link>
+      <Link to="/qr">QR generátor</Link>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
-// opravit 
+export default Navbar;
