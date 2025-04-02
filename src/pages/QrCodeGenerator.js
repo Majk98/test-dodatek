@@ -32,6 +32,8 @@ const QRCodeGenerator = () => {
         <button onClick={generateQRCode}>Generovat QR kód</button>    
         {qrCode && <img src={qrCode} alt="QR Code" />}
       </div>
+
+      
     </div>
   );
 };

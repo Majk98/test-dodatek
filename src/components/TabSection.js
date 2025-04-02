@@ -52,7 +52,7 @@ const TabSection = () => {
           <div>
             <h3>Jak to funguje</h3>
             <p>
-              Naše testy simulují reálné podmínky a poskytují okamžitou zpětnou vazbu a podrobnou analýzu výsledků.
+              Naše testy simulují reálné podmínky a poskytují okamžitou zpětnou vazbu a analýzu výsledků.
              
             </p>
           </div>
